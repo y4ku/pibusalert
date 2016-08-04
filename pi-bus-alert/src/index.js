@@ -3,7 +3,19 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 
+const rootNode = document.getElementById('root');
+
 ReactDOM.render(
   <App />,
-  document.getElementById('root')
+  rootNode
 );
+
+if (module.hot) {
+  module.hot.accept('./App', () => {
+    const NextApp = require('./App').default;
+    ReactDOM.render(
+      <NextApp />,
+      rootNode
+    );
+  }); 
+}

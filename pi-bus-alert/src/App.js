@@ -27,9 +27,8 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h1> Raspberry Pi Bus Alert </h1>
         </div>
-        <h1> Raspberry Pi Bus Alert </h1>
         {this.state.predictions ? 
           <h1> Bus {this.state.predictions.bus} incoming in {this.state.predictions.time}</h1> 
           : 
